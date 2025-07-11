@@ -15,7 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 #works{
     width: 90%;
@@ -30,6 +30,19 @@ body{
     position: relative;
     gap: 20px;
     min-height:400px;
+    position: relative;
+    padding-top: 60px;
+}
+#searchPriority{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #5e5e5e;
+    color: white;
+    font-size: 16px;
 }
 .work{
     width: 250px;
@@ -63,27 +76,74 @@ body{
     align-items: center;
     flex-direction: column;
     position: relative;
-    
+    color:white;
 }
-.delete{
-    background-image: url(../img/delete.svg);
+.button{
     width: 30px;
     height: 30px;
     background-size: 100% 100%;
     position: absolute;
-    
+    cursor: pointer;
+}
+.delete{
+    background-image: url(../img/delete.svg);
     top: 10px;
     left: 10px;
 }
 .complete{
     background-image: url(../img/complete.svg);
-    width: 30px;
-    height: 30px;
-    background-size: 100% 100%;
-    position: absolute;
     top: 10px;
     right: 10px;
 }
-.title{
-    
+#addTask{
+    width: 250px;
+    height: 70px;
+    background-color: #18632b;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.addTaskModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .addTaskContent{
+        width: 400px;
+        height: 300px;
+        background-color: #282828;
+        border-radius: 10px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+}
+.search{
+    position: absolute;
+    top: 20px;
+    right: 130px;
+    padding: 5px 10px;
+    background-color: #5e5e5e;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
