@@ -37,6 +37,7 @@ $('.img').on('click', function () {
 
 
                 <div class="close">X</div>
+                <div class="id">${id}/${imgs.length}</div>
             </div>
         </div>
     `);
@@ -56,11 +57,13 @@ $('.img').on('click', function () {
             currentImg.attr('src', newSrc);
             $('.title').text(imgs[currentId].title);
             $('.alt').text(imgs[currentId].alt);
+            $('.id').text(`${currentId}/${imgs.length}`);
         }else{
             let newSrc = `img/${imgs[imgs.length - 1].src}`;
             currentImg.attr('src', newSrc);
             $('.title').text(imgs[imgs.length - 1].title);
             $('.alt').text(imgs[imgs.length - 1].alt);
+            $('.id').text(`${imgs.length - 1}/${imgs.length}`);
         }
     })
     $('.arrow-r').on('click', function () {
@@ -75,11 +78,13 @@ $('.img').on('click', function () {
             currentImg.attr('src', newSrc);
             $('.title').text(imgs[currentId].title);
             $('.alt').text(imgs[currentId].alt);
+            $('.id').text(`${currentId}/${imgs.length}`);
         }else{
             let newSrc = `img/${imgs[0].src}`;
             currentImg.attr('src', newSrc);
             $('.title').text(imgs[0].title);
             $('.alt').text(imgs[0].alt);
+            $('.id').text(`0/${imgs.length}`);
         }
     })
     $('.modal-content').on('click', function(event) {
@@ -127,6 +132,7 @@ $('.img').on('click', function () {
         currentImg.attr('src', `img/${newImg.src}`);
         $('.title').text(newImg.title);
         $('.alt').text(newImg.alt);
+        $('.id').text(`${currentId}/${imgs.length}`);
     });
 
     $('.modal').on('click', function () {
